@@ -1,0 +1,27 @@
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main ()
+{
+  double wages, rate, hours;
+
+  cout << fixed << showpoint << setprecision(2);
+  cout << "Enter the hours worked and your pay rate: " << endl; 
+  cin >> hours >> rate;
+
+  if ( hours > 40) // Need to include over time pay 
+  {
+    wages= 40 * rate + (1.5 * rate *(hours -40));
+  }
+  else // NO overtime bc hours are less than  or = 40
+  {
+    wages = hours * rate ;
+  }
+  cout << endl;
+  cout << "Your wages are $ "<< wages << endl;
+
+
+return 0;  
+}
